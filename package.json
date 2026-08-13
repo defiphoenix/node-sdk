@@ -1,6 +1,6 @@
 {
   "name": "@zoneless/node",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Zoneless SDK for Node.js",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -16,8 +16,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "node init && tsup",
+    "dev": "node init && tsup --watch",
     "test": "vitest",
     "lint": "eslint src --ext .ts",
     "typecheck": "tsc --noEmit",
@@ -46,6 +46,8 @@
   "dependencies": {
     "@solana/web3.js": "^1.98.4",
     "bs58": "^6.0.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "zod": "^3.23.0"
   },
   "devDependencies": {
